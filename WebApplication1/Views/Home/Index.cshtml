@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Credit Card Validator</h1>
+
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+        <table>
+            <tr>
+                <td>Enter your credit card number : </td>
+                <td><input type="number" id="creditcardnumber" name="creditcardnumber" max="9999999999999999"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+        <hr />
+        @ViewBag.Name
+    </form>
+</div>
